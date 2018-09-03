@@ -46,7 +46,7 @@ export class PearsonUsers extends Component {
             </div>) : <div className="empty-list">Fetching data from api........</div>}
           
         </div>
-        <div className="delete-duplicate"><a href="" onClick={(e) => this.deleteDuplicateUsers(e)} >Delete Duplicate</a></div>
+        {this.state.users.length ? (<div className="delete-duplicate"><a href="" onClick={(e) => this.deleteDuplicateUsers(e)} >Delete Duplicate</a></div>) : ''}
       </React.Fragment>
     );
   }
