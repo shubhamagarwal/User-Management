@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #D8D8D8;
+}
+h1 {
+  color: #007FA3;
+  font-size:36px;
+}
+
+.pearon-users {
+  text-align: center;
+  font-size: 36px;
+}
+
+.column {
+    float: left;
+    width: 212px;
+    height: 82px;
+    margin: 47px;
+    margin-top: 100px;
+    padding: 37px;
+    background-color: white;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+    margin-top:100px;
+}
+
+img {
+  margin-top:-150px;
+  border-radius: 50%;
+  width:80px;
+  height: 80px;
+  position: relative;
+  bottom: 42px;
+}
+
+h2 {
+  font-size: 18px;
+  color: #E93939;
+  text-align:center;
+  position: relative;
+  bottom: 27px;
+}
+
+ .row .column a{
+  font-size: 14px;
+  color: #007FA3;
+  text-align: left;
+  float: left;
+  border-style: none;
+  margin-left: -26px
+}
+
+ .delete-duplicate{
+  font-size: 14px;
+  color: #007FA3;
+  text-align: center;
+}
+
+.empty-list {
+  color: #007FA3;
+  font-size: 24px;
+}
+
