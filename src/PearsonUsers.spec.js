@@ -28,7 +28,9 @@ describe("PearsonUsers", () => {
 
   it('component contain UserProfile component', () => {
     const wrapper = setup();
+    const event = { preventDefault: () => {} };
     expect(wrapper.find('UserProfile')).toBeDefined();
+    wrapper.instance().deleteUserById(event,1);
   });
 
   it("deleteUserById function to be called", () => {
@@ -46,10 +48,12 @@ describe("PearsonUsers", () => {
   });
 
   it("Simulate the click on button", () => {
+    const event = { preventDefault: () => {} };
     const wrapper = setup();
     const userData = [{id: 1, first_name: "George", last_name: "Bluth", avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/128.jpg"}, {id: 1, first_name: "Janet", last_name: "Janet", avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/128.jpg"}]
     wrapper.setState({ users: userData });
     expect(wrapper.find('.delete-duplicate').length).toBe(1);
     wrapper.find('.delete-duplicate').simulate('click');
+    wrapper.instance().deleteDuplicateUsers(event);
   });
 });
